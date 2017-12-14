@@ -1,0 +1,36 @@
+{%  from "includes/_formhelper.html" import render_field %}
+{% extends "layout.html" %}
+    {%  block body %}
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+            <div class="card mt-4">
+                <img class="card-img-top img-fluid" src="http://placehold.it/900x200" alt="">
+                <div class="card-body">
+
+                        <form method = 'POST' action="/">
+                            <div class="form-group">
+                                {{ render_field(form.title, class="form-control") }}
+                                {{ render_field(form.description, class="form-control") }}
+                                {{ render_field(form.price, class="form-control") }}
+                                <dt>{{ form.rating.label }}</dt>
+                                <div class="radio-inline">
+                                {%  for subfield in form.rating %}
+                                    {{ subfield }} {{ subfield.label }}
+                                {%  endfor %}
+                                </div>
+                                <dt>
+                                    <button type="submit" value="submit" class="btn btn-info">Submit</button>
+                                </dt>
+                            </div>
+
+                        </form>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    {%  endblock %}
+
