@@ -2,3 +2,4 @@ Basic Python, 25, Basic python book for beginner, 4
 Advanced Python, 39, Advanced python book for professional, 3
 Basic Java, 19, Basic Java programming book for beginner, 2
 Intermediate Python, 29, Intermediate Python programming book, 3
+Intermediate Javascript, 9, Useless book, 1

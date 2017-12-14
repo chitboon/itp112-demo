@@ -49,4 +49,28 @@ def get_books():
         book_list.append(book)
     return book_list
 
+# get book with title that matched keyword
+def get_book(keyword):
+    book_list = get_books()
+    books = []
+    for book in book_list:
+        if book.title.find(keyword) >= 0:
+            books.append(book)
+    return books
+
+def create_book(book_dict):
+    root = db.reference('/book')
+    root.set(book_dict)
+
+def add_book(book_dict):
+    root = db.reference('/book')
+    root.push(book_dict)
+
+def update_book(dict):
+    root = db.reference('/book')
+    ref = root.child('bkx12')
+    # { 'price': '1' }
+    ref.update(dict)
+    print(ref)
+
 init_firebase()
