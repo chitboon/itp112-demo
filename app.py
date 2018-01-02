@@ -3,8 +3,7 @@ from entities import *
 from flask import Flask, render_template
 
 app = Flask(__name__)
-
-
+print(__name__)
 @app.route('/')
 def default():
     # gets a list of books from the file books.txt

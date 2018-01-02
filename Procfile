@@ -1,1 +1,1 @@
-web: python demo.py runserver 0.0.0.0:80
+web: gunicorn --bind 0.0.0.0:80 app:app
