@@ -52,4 +52,4 @@ def test(function):
 
 if __name__ == '__main__':
     app.secret_key = 'Python'
-    app.run()
+    app.run(host='0.0.0.0', port=80)
